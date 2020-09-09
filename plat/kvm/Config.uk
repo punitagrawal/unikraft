@@ -43,13 +43,21 @@ config KVM_DEBUG_VGA_CONSOLE
           Choose VGA console for the debug printing
 endmenu
 
-config KVM_PCI
+menuconfig KVM_PCI
        bool "PCI Bus Driver"
        default y
        depends on (ARCH_X86_64)
        select LIBUKBUS
        help
                 PCI bus driver for probing and operating PCI devices
+
+if (KVM_PCI)
+config PCI_SAMPLE
+       bool "Sample PCI driver"
+       default y
+       help
+	Choose Sample PCI driver for 0x1CAB, 0x4DOE
+endif
 
 config VIRTIO_BUS
       bool  "Virtio bus driver"
