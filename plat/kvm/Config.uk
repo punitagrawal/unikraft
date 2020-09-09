@@ -55,6 +55,7 @@ if (KVM_PCI)
 config PCI_SAMPLE
        bool "Sample PCI driver"
        default y
+       depends on LIBDEVFS
        help
 	Choose Sample PCI driver for 0x1CAB, 0x4DOE
 endif

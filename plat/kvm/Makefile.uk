@@ -176,8 +176,10 @@ LIBKVMGICV2_SRCS-y += $(UK_PLAT_DRIVERS_BASE)/gic/gic-v2.c
 ## PCI Sample library definitions
 ##
 LIBKVMPCISAMPLE_CINCLUDES-y     += -I$(UK_BASE)/include
+LIBKVMPCISAMPLE_CINCLUDES-y     += -I$(UK_BASE)/lib/devfs/include
 LIBKVMPCISAMPLE_CINCLUDES-y     += -I$(UK_BASE)/lib/ukalloc/include
 LIBKVMPCISAMPLE_CINCLUDES-y     += -I$(UK_BASE)/lib/ukdebug/include
+LIBKVMPCISAMPLE_CINCLUDES-y     += -I$(UK_BASE)/lib/vfscore/include
 LIBKVMPCISAMPLE_CINCLUDES-y     += -I$(UK_PLAT_COMMON_BASE)/include
 
 LIBKVMPCISAMPLE_SRCS-y += $(UK_PLAT_DRIVERS_BASE)/pci/sample.c
